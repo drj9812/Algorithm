@@ -6,11 +6,9 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
 
         for (int i = 2; i <= n; i++) {
-            if (n % i == 0) {
-                n = n / i;
+            while (n % i == 0) {
                 System.out.println(i);
-                i--;
-
+                n = n / i;
             }
         }
     }
