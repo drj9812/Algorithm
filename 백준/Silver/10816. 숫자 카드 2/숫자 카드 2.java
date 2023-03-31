@@ -24,6 +24,7 @@ public class Main {
 		int m = Integer.parseInt(br.readLine());
 		StringTokenizer str1 = new StringTokenizer(br.readLine());
 		StringBuilder sb = new StringBuilder();
+        
 		for (int j = 0; j < m; j++) {
 			int b = Integer.parseInt(str1.nextToken());
 			if (cardList.get(b) == null) {
