@@ -5,6 +5,7 @@ import java.util.StringTokenizer;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		
 		int n = Integer.parseInt(br.readLine());
 		HashMap<Integer, Integer> list = new HashMap<>();
@@ -22,10 +23,11 @@ public class Main {
 			Integer x = Integer.parseInt(str.nextToken());
 			
 			if (list.containsKey(x) == true) {
-				System.out.println(1);
+				sb.append(1).append("\n");
 			} else {
-				System.out.println(0);
+				sb.append(0).append("\n");
 			}
 		}
+		System.out.println(sb);
 	}
 }
