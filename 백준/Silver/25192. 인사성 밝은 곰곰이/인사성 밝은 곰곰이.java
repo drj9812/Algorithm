@@ -1,12 +1,12 @@
 import java.io.*;
-import java.util.HashMap;
+import java.util.HashSet;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		HashMap<String, Boolean> chatLogs = new HashMap<String, Boolean>();
 		int n = Integer.parseInt(br.readLine());
+		HashSet<String> chatLogs = new HashSet<String>();
 		int cnt = 0;
 		
 		for (int i = 0; i < n; i++) {
@@ -15,16 +15,15 @@ public class Main {
 			if (input.equals("ENTER")) {
 				chatLogs.clear();
 				continue;
-				
-			} else {
-				if (!chatLogs.containsKey(input)) {
-					chatLogs.put(input, true);
-					cnt++;
-				} else {
-					chatLogs.put(input, false);
-				}
+			}
+			
+			if (!chatLogs.contains(input)) {
+				chatLogs.add(input);
+				cnt++;
 			}
 		}
+		
 		System.out.println(cnt);
+		
 	}
 }
