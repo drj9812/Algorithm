@@ -8,7 +8,6 @@ public class Main {
 		
 		HashSet<String> rainbowDancers = new HashSet<String>();
 		int n = Integer.parseInt(br.readLine());
-		int cnt = 0;
 		
 		for (int i = 0; i < n; i++) {
 			String input = br.readLine();
