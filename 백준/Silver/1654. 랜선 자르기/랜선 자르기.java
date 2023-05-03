@@ -52,8 +52,8 @@ public class Main {
 		return candidates.get(0);
 	}
 	
-	private static long getLineCnt(int[] lines, long cutLength) {
-		long lineCnt = 0;
+	private static int getLineCnt(int[] lines, long cutLength) {
+		int lineCnt = 0;
 		
 		for (int i = 0; i < lines.length; i++) {
 			lineCnt += (long) lines[i] / cutLength;
