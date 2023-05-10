@@ -11,21 +11,12 @@ public class Main {
 		int k = Integer.parseInt(tkn.nextToken());
 
 		int cnt = 0;
-		int maxIndex = 0;
 
 		for (int i = 0; i < n; i++) {
 			units[i] = Integer.parseInt(br.readLine());
-
-			if (units[i] > k) {
-				maxIndex = i - 1;
-			} else if (units[i] == k) {
-				maxIndex = i;
-			}
 		}
 		
-		if (maxIndex == 0) {
-			maxIndex = n - 1;
-		}
+		int maxIndex = n - 1;
 		
 		while (maxIndex >= 0) {
 			if (k % units[maxIndex] == 0) {
