@@ -16,7 +16,7 @@ public class Main {
 			units[i] = Integer.parseInt(br.readLine());
 		}
 		
-		int maxIndex = n - 1;
+		int maxIndex = units.length - 1;
 		
 		while (maxIndex >= 0) {
 			if (k % units[maxIndex] == 0) {
