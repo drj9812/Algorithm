@@ -1,15 +1,13 @@
-import java.util.Scanner;
+import java.io.*;
 
-public class Main{
-
-	public static void main(String[] args) {
-
-		Scanner scanner = new Scanner(System.in);
-		int y =  scanner.nextInt();
-		for(int i= 1; i <= y  ; i ++) {
-			System.out.println(i);
-		}
-
-	}
-
+public class Main {
+public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    
+    int n = Integer.parseInt(br.readLine());
+    
+    for (int i = 1; i <= n; i++) {
+        System.out.println(i);
+    }
+  }
 }
