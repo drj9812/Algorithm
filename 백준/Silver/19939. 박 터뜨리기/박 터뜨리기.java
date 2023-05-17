@@ -22,26 +22,25 @@ public class Main {
 			System.out.println(baskets[baskets.length - 1] - baskets[0]);
 		} else {
 
-			if (n >= baskets.length) {
-				if (n % baskets.length == 0) {
-					System.out.println(baskets[baskets.length - 1] - baskets[0]);		
-				} else {
-					
-					int cnt = n / baskets.length;
+			if (n % baskets.length == 0) {
+				System.out.println(baskets[baskets.length - 1] - baskets[0]);
+			} else {
 
-					for (int j = 0; j < cnt; j++) {
-						for (int m = 0; m < baskets.length; m++) {
-							baskets[m] += 1;
-							n -= 1;
-						}
+				int cnt = n / baskets.length;
+
+				for (int j = 0; j < cnt; j++) {
+					for (int m = 0; m < baskets.length; m++) {
+						baskets[m] += 1;
+						n -= 1;
 					}
-
-					baskets[baskets.length - n] += n;
-
-					Arrays.sort(baskets);
-
-					System.out.println(baskets[baskets.length - 1] - baskets[0]);
 				}
+
+				baskets[baskets.length - n] += n;
+
+				Arrays.sort(baskets);
+
+				System.out.println(baskets[baskets.length - 1] - baskets[0]);
+
 			}
 		}
 	}
