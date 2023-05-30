@@ -13,7 +13,7 @@ public class Main {
             String[] input = br.readLine().split(" ");
             int age = Integer.parseInt(input[0]);
             String name = input[1];
-            members[i] = new Member(age, name);
+            members[i] = new Member(age, name, i);
         }
 
         Arrays.sort(members, new Comparator<Member>() {
@@ -37,9 +37,10 @@ public class Main {
         String name;
         int index;
 
-        public Member(int age, String name) {
+        public Member(int age, String name, int index) {
             this.age = age;
             this.name = name;
+            this.index = index;
         }
     }
 }
