@@ -1,7 +1,11 @@
-SELECT B.TITLE, B.BOARD_ID, 
-       R.REPLY_ID, R.WRITER_ID, R.CONTENTS, TO_CHAR(R.CREATED_DATE,'YYYY-MM-DD') AS CREATED_DATE
-FROM USED_GOODS_BOARD B
-INNER JOIN USED_GOODS_REPLY R
-ON B.BOARD_ID = R.BOARD_ID
-WHERE TO_CHAR(B.CREATED_DATE,'YYYY-MM') = '2022-10'
-ORDER BY R.CREATED_DATE ASC, B.TITLE ASC;
+SELECT b.title,
+       b.board_id,
+       r.reply_id,
+       r.writer_id,
+       r.contents,
+       TO_CHAR(r.created_date, 'YYYY-MM-DD') as created_date
+  FROM used_goods_board b
+ INNER JOIN used_goods_reply r
+    ON b.board_id = r.board_id
+ WHERE TO_CHAR(b.created_date, 'YYYY-MM') = '2022-10'
+ ORDER BY r.created_date ASC, b.title ASC;
