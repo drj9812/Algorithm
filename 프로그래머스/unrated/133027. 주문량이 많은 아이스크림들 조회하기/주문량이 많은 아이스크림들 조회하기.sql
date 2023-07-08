@@ -9,4 +9,4 @@ SELECT FLAVOR
             FROM july)
       GROUP BY flavor
       ORDER BY total_order DESC)
- WHERE ROWNUM <= 3; 
+ FETCH FIRST 3 ROWS ONLY;
