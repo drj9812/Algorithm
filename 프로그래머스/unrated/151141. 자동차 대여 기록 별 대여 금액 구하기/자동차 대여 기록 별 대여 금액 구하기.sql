@@ -7,6 +7,7 @@ SELECT b.history_id,
                CASE WHEN h.end_date - h.start_date + 1 >= 90 THEN '90일 이상'
                     WHEN h.end_date - h.start_date + 1 >= 30 THEN '30일 이상'
                     WHEN h.end_date - h.start_date + 1 >= 7 THEN '7일 이상'
+                    ELSE '7일 미만'
                END AS period
           FROM car_rental_company_car c
          INNER JOIN car_rental_company_rental_history h
