@@ -2,7 +2,7 @@ SELECT car_id,
        car_type,
        (daily_fee * 30) - (daily_fee * 30 * discount_rate / 100) AS fee
   FROM 
-    (SELECT DISTINCT crcc.car_id,
+    (SELECT crcc.car_id,
             crcc.car_type,
             crcc.daily_fee,
             crcdp.discount_rate
