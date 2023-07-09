@@ -1,6 +1,6 @@
 SELECT a.history_id,
        CASE WHEN a.period = '7일 미만' THEN a.fee
-            ELSE a.fee - (a.fee * COALESCE(b.discount_rate, 0) / 100)
+            ELSE a.fee - (a.fee * b.discount_rate / 100)
        END AS fee
   FROM (SELECT h.history_id,
                c.daily_fee * (h.end_date - h.start_date + 1) AS fee,
