@@ -13,8 +13,7 @@ SELECT car_id,
          crcc.car_id NOT IN
          (SELECT car_id
             FROM car_rental_company_rental_history
-           WHERE 
-              END_DATE > DATE '2022-11-01' AND START_DATE < DATE '2022-12-01')
+           WHERE END_DATE > DATE '2022-11-01' AND START_DATE < DATE '2022-12-01')
          AND
          crcc.car_type IN ('세단', 'SUV')
          AND
