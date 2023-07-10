@@ -1,11 +1,11 @@
 SELECT d.hour,
     CASE WHEN a.hour IS NULL THEN 0
-    ELSE a.count
-    END AS count
+         ELSE a.count
+     END AS count
   FROM
     (SELECT LEVEL - 1 AS hour
-            FROM DUAL
-         CONNECT BY LEVEL <= 24) d
+       FROM DUAL
+    CONNECT BY LEVEL <= 24) d
   LEFT JOIN
     (SELECT EXTRACT(HOUR FROM CAST(datetime AS TIMESTAMP)) AS HOUR,
             COUNT(*) AS count
