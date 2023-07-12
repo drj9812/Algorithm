@@ -15,20 +15,14 @@ public class Main {
         }
 
         int k = Integer.parseInt(br.readLine());
-
-        sortScores(scores, k);
+        int groupSize = n / k;
+        
+        for (int i = 0; i < n; i += groupSize) {
+			Arrays.sort(scores, i, i + groupSize);
+		}
 
         for (int m = 0; m < scores.length; m++) {
             System.out.print(scores[m] + " ");
-        }
-    }
-
-    private static void sortScores(int[] scores, int k) {
-        int n = scores.length;
-        int groupSize = n / k;
-
-        for (int i = 0; i < k; i++) {
-            Arrays.sort(scores, i * groupSize, (i + 1) * groupSize);
         }
     }
 }
