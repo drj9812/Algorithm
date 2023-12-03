@@ -1,18 +1,20 @@
-import java.util.*;
-    public class Main {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
-            
-            if (a>b) {
-                System.out.println(">");
-            } else if (a<b) {
-                System.out.println("<");
-            } else {
-                System.out.println("==");
-            }
-           
-            
-        }
-    }
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer tkn = new StringTokenizer(br.readLine());
+		
+		int a = Integer.parseInt(tkn.nextToken());
+		int b = Integer.parseInt(tkn.nextToken());
+		
+		if (a > b) {
+			System.out.println(">");
+		} else if (a < b) {
+			System.out.println("<");
+		} else if (a == b){
+			System.out.println("==");
+		}
+	}
+}
