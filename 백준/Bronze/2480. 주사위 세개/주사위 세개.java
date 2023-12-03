@@ -9,11 +9,9 @@ import java.util.*;
             
             if (a==b && b==c) {
             	System.out.println(10000+(a*1000));
-            } else if (a==b && b!=c) {
+            } else if (a==b || a==c) {
             	System.out.println(1000+(a*100));
-            } else if (a==c && c!=b) {
-            	System.out.println(1000+(a*100));
-            } else if (b==c && b!=a) {
+            } else if (b==c) {
             	System.out.println(1000+(b*100));
             } else if (a>b && a>c) {
             	System.out.println(a*100);
