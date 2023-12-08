@@ -4,4 +4,4 @@ SELECT animal_id,
        ELSE 'O'
         END AS 중성화
   FROM animal_ins
- ORDER BY animal_id ASC, name ASC, 중성화 ASC;
+ ORDER BY animal_id ASC;
