@@ -5,4 +5,6 @@ SELECT *
     INNER JOIN animal_outs o
        ON i.animal_id = o.animal_id
     ORDER BY o.datetime - i.datetime DESC)
- WHERE ROWNUM <= 2;
+ FETCH FIRST 2 ROWS ONLY;
+ 
+ 
