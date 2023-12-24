@@ -1,11 +1,8 @@
-SELECT d.hour, CASE WHEN o.count IS NULL THEN 0
-                    ELSE o.count
-               END AS count
+SELECT d.hour, COUNT(o.animal_id) AS count
   FROM (SELECT LEVEL - 1 AS hour
-          FROM DUAL
+          FROM dual
        CONNECT BY LEVEL <= 24) d
-  LEFT JOIN (SELECT TO_CHAR(datetime, 'FMHH24') AS hour, COUNT(*) AS count
-               FROM animal_outs
-              GROUP BY TO_CHAR(datetime, 'FMHH24')) o
-    ON d.hour = o.hour
+  LEFT JOIN animal_outs o
+    ON d.hour = TO_CHAR(o.datetime, 'FMHH24')
+ GROUP BY d.hour
  ORDER BY d.hour ASC;
