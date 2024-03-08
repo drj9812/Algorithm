@@ -16,13 +16,13 @@ public class Main {
     	}
     }
     
-    public static int isPalindrome(String s) {
+    private static int isPalindrome(String s) {
     	recursionCallCnt = 0;
     	
     	return recursion(s, 0, s.length() - 1);
     }
     
-    public static int recursion(String s, int l, int r) {
+    private static int recursion(String s, int l, int r) {
     	recursionCallCnt++;
     	
     	if (l >= r) {
