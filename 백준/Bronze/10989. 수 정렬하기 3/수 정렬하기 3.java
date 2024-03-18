@@ -18,8 +18,7 @@ public class Main {
 		Arrays.sort(numbers);
 		
 		for (int i = 0; i < numbers.length; i++) {
-            bfrWriter.write(Integer.toString(numbers[i]));
-            bfrWriter.newLine();
+            bfrWriter.write(numbers[i] + "\n");
 		}
 		
 		bfrWriter.flush();
