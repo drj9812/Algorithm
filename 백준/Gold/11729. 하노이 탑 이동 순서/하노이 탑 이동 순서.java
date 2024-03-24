@@ -2,7 +2,7 @@ import java.io.*;
  
 public class Main {
  
-	public static StringBuilder strBuilder = new StringBuilder();
+	private static StringBuilder strBuilder = new StringBuilder();
  
 	public static void main(String[] args) throws IOException {
 		
@@ -17,7 +17,7 @@ public class Main {
 	}
  
  
-	public static void solveTowerOfHanoi(int n, int start, int mid, int end) {
+	private static void solveTowerOfHanoi(int n, int start, int mid, int end) {
 		if (n == 1) {
 			strBuilder.append(start + " " + end + "\n");
 			return;
