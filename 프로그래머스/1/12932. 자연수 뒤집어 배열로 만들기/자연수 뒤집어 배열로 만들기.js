@@ -1,0 +1,1 @@
+const solution = (n) => (n + '').split('').reverse().map(Number);
