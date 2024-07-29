@@ -1,0 +1,1 @@
+const solution = (n) => Number((n + '').split('').sort().reverse().join(''));
