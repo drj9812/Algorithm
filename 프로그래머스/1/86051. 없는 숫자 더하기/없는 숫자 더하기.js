@@ -1,0 +1,1 @@
+const solution = (numbers) => numbers.reduce((prev, curr) => prev - curr, 45);
