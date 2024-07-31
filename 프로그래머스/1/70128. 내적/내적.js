@@ -1,0 +1,1 @@
+const solution = (a, b) => a.map((value, index) => value * b[index]).reduce((prev, curr) => prev + curr);
