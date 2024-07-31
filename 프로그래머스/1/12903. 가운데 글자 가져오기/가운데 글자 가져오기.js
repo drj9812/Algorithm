@@ -1,6 +1,5 @@
 const solution = (s) => {
-    const arr = s.split('');
-    const mid = parseInt(arr.length / 2);
+    const mid = parseInt(s.length / 2);
 
-    return arr.length % 2 !== 0 ? arr[mid] : arr.slice(mid - 1, mid + 1).join('');
+    return s.length % 2 !== 0 ? s[mid] : s.slice(mid - 1, mid + 1);
 };
