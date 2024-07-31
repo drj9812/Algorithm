@@ -1,11 +1,6 @@
 const solution = (arr) => {
-    const copyArr = [...arr];
-    // const copyArr = arr.slice();
-    // const copyArr = Array.from(arr);
-
-    const min = arr.sort((a, b) => a - b)[0];
-    const index = copyArr.indexOf(min);
+    const index = arr.indexOf(Math.min(...arr));
+    arr.splice(index, 1);
     
-    copyArr.splice(index, 1);
-    return copyArr.length !== 0 ? copyArr : [-1];
+    return arr.length !== 0 ? arr : [-1];
 };
