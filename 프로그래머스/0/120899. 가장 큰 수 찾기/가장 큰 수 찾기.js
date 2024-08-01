@@ -1,11 +1,5 @@
 const solution = (array) => {
-    let max = 0;
-    
-    for (e of array) {
-        if (e > max) {
-            max = e;
-        } 
-    }
-    
+    let max = Math.max(...array);
+
     return [max, array.indexOf(max)];
-};
+}
