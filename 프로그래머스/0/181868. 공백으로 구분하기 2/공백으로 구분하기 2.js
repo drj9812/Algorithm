@@ -1,1 +1,1 @@
-const solution = (my_string) => my_string.split(' ').filter(word => word.length > 0);
+const solution = (my_string) =>  my_string.split(' ').filter(word => word);
