@@ -1,12 +1,12 @@
 const solution = (sizes) => {
-    let maxWidth = 0;
-    let maxHeight = 0;
+    const walletSize = [0, 0];
     
     sizes.forEach(size => {
-        const [w, h] = size.sort((a, b) => b - a);
-        if (w > maxWidth) maxWidth = w;
-        if (h > maxHeight) maxHeight = h;
+        size.sort((a, b) => b - a);
+        
+        if (size[0] > walletSize[0]) walletSize[0] = size[0];
+        if (size[1] > walletSize[1]) walletSize[1] = size[1];
     });
 
-    return maxWidth * maxHeight;
+    return walletSize[0] * walletSize[1];
 };
