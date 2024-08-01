@@ -1,0 +1,1 @@
+const solution = (rny_string) => rny_string.split('').map((e) => e === 'm' ? 'rn' : e).join('');
