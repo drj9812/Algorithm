@@ -21,5 +21,5 @@ const solution = (N, stages) => {
 
     stageFailureRates.sort((a, b) => b[1] - a[1] || a[0] - b[0]);
 
-    return stageFailureRates.map(([stage, _]) => stage);
+    return stageFailureRates.map(([stage]) => stage);
 };
